@@ -1,37 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  main.cpp
- *
- *    Description:  Homework #01
- *
- *        Version:  1.0
- *        Created:  2022-07-23
- *       Revision:  none
- *       Compiler:  g++
- *
- * 	 Student Name: Yeoeun Kim
- * 	 Student ID: 2130008
- *   Organization:  Ewha Womans University
- *
- * =====================================================================================
- */
-
- /*
- * ********** Please read the instructions below carefully ********** 
- * Your name and student ID must be printed when this project is executed
- * Do not print anything other than your name and student ID (Delete printf functions used for debugging when submitting this homework)
- * - If not, there will be 20% penalty
- * Run make clean command before submitting your homework
- * Change this project folder name to studentID_yourname (EX: 1234567_myungkukyoon)
- * You must compress this project folder (not the files in this folder)
- * - If not, there will be 20% penalty
- * - Use ZIP compression utility (DO NOT USE TAR COMMAND)
- * The name of ZIP file must be studentID_yourname.zip (EX: 1234567_myungkukyoon.zip)
- * All the tests must be done in 5 seconds
- * - If not, you will get 0%
- */
-
 #include <stdio.h>
 #include<stdlib.h>
 
@@ -54,13 +20,11 @@ void print_output_to_file(FILE* fp, int ROW, int COL) {
 
 //CA: Please write your code
 int main() {
-	//CA: YOUR NAME with Student ID
 	FILE* ifp, * ofp;
 	int num, n, k, m, i, j, l = 0;
 
 
 	ifp = fopen("input.txt", "r");
-	printf("Kim, Yeoeun (2130008)\n");
 	ofp = fopen(outputFileName, "w");
 	fscanf(ifp, "%d\n", &num);
 	for (; num>0; num--) {

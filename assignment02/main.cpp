@@ -1,37 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  main.cpp
- *
- *    Description:  Homework #02
- *
- *        Version:  1.0
- *        Created:  2022-09-15
- *       Revision:  none
- *       Compiler:  g++
- *
- * 	 Student Name: Yeoeun Kim
- * 	 Student ID: 2130008
- *   Organization:  Ewha Womans University
- *
- * =====================================================================================
- */
-
- /*
- * ********** Please read the instructions below carefully ********** 
- * Your name and student ID must be printed when this project is executed
- * Do not print anything other than your name and student ID (Delete printf functions used for debugging when submitting this homework)
- * - If not, there will be 20% penalty
- * Run make clean command before submitting your homework
- * Change this project folder name to studentID_yourname (EX: 1234567_myungkukyoon)
- * You must compress this project folder (not the files in this folder)
- * - If not, there will be 20% penalty
- * - Use ZIP compression utility (DO NOT USE TAR COMMAND)
- * The name of ZIP file must be studentID_yourname.zip (EX: 1234567_myungkukyoon.zip)
- * All the tests must be done in 5 seconds
- * - If not, you will get 0%
- */
-
  /*
  * Input instructions
  * add, sub, addi, sw, lw, beg
@@ -84,7 +50,7 @@ void sub(FILE* ofp, int* b1, int* b2, int* b3, int* b4, int* b5, int* b6, int* b
 	rd = b6[0] * 16 + b6[1] * 8 + b6[2] * 4 + b6[3] * 2 + b7[0];
 	rs1 = b4[0] * 16 + b4[1] * 8 + b4[2] * 4 + b4[3] * 2 + b5[0];
 	rs2 = b2[3] * 16 + b3[0] * 8 + b3[1] * 4 + b3[2] * 2 + b3[3];
-	fprintf(ofp, "sub x%d,x%d,%d\n", rd, rs1, rs2);
+	fprintf(ofp, "sub x%d,x%d,x%d\n", rd, rs1, rs2);
 }
 
 void sw(FILE* ofp, int* b1, int* b2, int* b3, int* b4, int* b5, int* b6, int* b7) {
@@ -179,8 +145,6 @@ int main(){
 	int n1, n2, n3, n4, n5, n6, n7, n8;
 	int* b1, * b2, * b3, * b4, * b5, * b6, * b7, * b8;
 
-	//CA: YOUR NAME with Student ID
-	printf("Kim, Yeoeun (2130008)\n"); 
 	FILE* ifp, * ofp;
 	ifp= fopen("input.txt", "r");
 	ofp = fopen(outputFileName, "w");
